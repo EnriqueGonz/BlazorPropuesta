@@ -1,0 +1,37 @@
+﻿[
+  {
+    "id_curso": 1,
+    "titulo": "Introduccion a Blazor",
+    "descripcion": "Curso Blazor basico",
+    "duracion": "32 Horas",
+    "costo": "Gratuito"
+  },
+  {
+    "id_curso": 2,
+    "titulo": "Introduccion a Java",
+    "descripcion": "Curso Java basico",
+    "duracion": "48 Horas",
+    "costo": "Gratuito"
+  },
+  {
+    "id_curso": 3,
+    "titulo": "Introduccion a Python",
+    "descripcion": "Curso Python basico",
+    "duracion": "88.2 Horas",
+    "costo": "Gratuito"
+  },
+  {
+    "id_curso": 4,
+    "titulo": "Introduccion a Flutter",
+    "descripcion": "Curso Flutter basico",
+    "duracion": "110 Horas",
+    "costo": "Gratuito"
+  },
+  {
+    "id_curso": 5,
+    "titulo": "Introduccion a HTML",
+    "descripcion": "Curso HTML basico",
+    "duracion": "32 Horas",
+    "costo": "Gratuito"
+  }
+]
