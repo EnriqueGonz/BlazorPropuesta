@@ -5,7 +5,7 @@
 
 <p>Selecciona el curso de tu interes para poder ver los videos</p>
 
-@if (forecasts == null)
+@if (cursos == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -21,13 +21,13 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var cursos in cursos)
             {
                 <tr>
-                    <td>@forecast.Titulo</td>
-                    <td>@forecast.Descripcion</td>
-                    <td>@forecast.Duracion</td>
-                    <td>@forecast.Costo</td>
+                    <td>@cursos.Titulo</td>
+                    <td>@cursos.Descripcion</td>
+                    <td>@cursos.Duracion</td>
+                    <td>@cursos.Costo</td>
                 </tr>
             }
         </tbody>
@@ -35,14 +35,14 @@ else
 }
 
 @code {
-    private WeatherForecast[] forecasts;
+    private Cursos[] cursos;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        cursos = await Http.GetFromJsonAsync<Cursos[]>("sample-data/cursos.json");
     }
 
-    public class WeatherForecast
+    public class Cursos
     {
         public String Titulo { get; set; }
 
