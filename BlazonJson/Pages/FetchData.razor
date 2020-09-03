@@ -18,6 +18,7 @@ else
                 <th>Descripcion</th>
                 <th>Duracion</th>
                 <th>Costo</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +28,8 @@ else
                     <td>@cursos.Titulo</td>
                     <td>@cursos.Descripcion</td>
                     <td>@cursos.Duracion</td>
-                    <td>@cursos.Costo</td>
+                    <td>@cursos.Id</td>
+                    <td><button type="button" class="btn btn-primary" onclick="window.location.href = 'https://localhost:44356/video';">Ver mas</button></td>
                 </tr>
             }
         </tbody>
@@ -44,6 +46,8 @@ else
 
     public class Cursos
     {
+        public String Id { get; set; }
+
         public String Titulo { get; set; }
 
         public String Descripcion { get; set; }
@@ -51,5 +55,6 @@ else
         public String Duracion { get; set; }
 
         public String Costo { get; set; }
+
     }
 }
