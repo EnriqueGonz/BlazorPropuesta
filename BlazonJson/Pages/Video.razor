@@ -1,23 +1,61 @@
-﻿@page "/video"
+﻿@page  "/video"
+@inject IJSRuntime JsRuntime
 <h3>Video</h3>
-<div class="contenedor">
-    <div class="c-video">
-        <video   class="video">
-            <source src="./video/1.mp4" type="video/mp4" />
-        </video>
 
-        <div class="controls">
-            <div class="orange-bar">
-                <div class="orange-juice">
+<div class="c-video">
+    <video class="video" id="video">
+        <source src="./video/1.mp4" type="video/mp4" />
+    </video>
 
-                </div>
-            </div>
-            <div class="buttons">
-                <button id="play-pause"></button>
+    <div class="controls">
+        <div class="orange-bar">
+            <div class="orange-juice">
+
             </div>
         </div>
-    </div>
-</div>
-@code {
+        <div class="buttons">
+            <button @onclick="playpause" id="play-pause"></button>
+        </div>
+        <div class="time">
+            <time id="time-elapsed">00:00</time>
+            <span> / </span>
+            <time id="duration">00:00</time>
+        </div>
 
+        <div class="volume-controls">
+            <input @onclick="volumen" class="volume" id="volume" value="1" type="range" max="1" min="0" step="0.01">
+        </div>
+    </div>
+    </div>
+@code {
+    async Task playpause()
+    {
+        await JsRuntime.InvokeVoidAsync("listener");
+        await JsRuntime.InvokeVoidAsync("tooglePP");
+        await JsRuntime.InvokeVoidAsync("convertArray");
+
+    }
+    async Task volumen()
+    {
+        await JsRuntime.InvokeVoidAsync("volumen");
+
+
+    }
+
+    async Task video1()
+    {
+        await JsRuntime.InvokeVoidAsync("video1");
+    }
+    async Task video2()
+    {
+        await JsRuntime.InvokeVoidAsync("video2");
+    }
+    async Task video3()
+    {
+        await JsRuntime.InvokeVoidAsync("video3");
+    }
+    async Task video()
+    {
+
+    }
 }
