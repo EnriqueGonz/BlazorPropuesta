@@ -1,4 +1,4 @@
-@page "/fetchdata"
+@page "/cursos"
 @inject HttpClient Http
 
 <h1>Cursos disponibles</h1>
@@ -11,50 +11,56 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Titulo</th>
-                <th>Descripcion</th>
-                <th>Duracion</th>
-                <th>Costo</th>
-                <th>Opciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var cursos in cursos)
-            {
+    <div style="overflow-x:auto;">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@cursos.Titulo</td>
-                    <td>@cursos.Descripcion</td>
-                    <td>@cursos.Duracion</td>
-                    <td>@cursos.Id</td>
-                    <td><button type="button" class="btn btn-primary" onclick="window.location.href = 'https://localhost:44356/video';">Ver mas</button></td>
+                    <th>Imagen</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th>Duracion</th>
+                    <th>Costo</th>
+                    <th>Opciones</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var cursos in cursos)
+                {
+                    <tr>
+                        <td><img src="@cursos.Imagen_curso"/></td>
+                        <td>@cursos.Titulo</td>
+                        <td>@cursos.Descripcion</td>
+                        <td>@cursos.Duracion</td>
+                        <td>@cursos.Costo</td>
+                        <td><button type="button" class="btn btn-primary" onclick="window.location.href = 'https://localhost:44356/cursos/detalles/'+@cursos.Id_curso;">Ver mas</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+        }
 
-@code {
+        @code {
     private Cursos[] cursos;
 
-    protected override async Task OnInitializedAsync()
-    {
-        cursos = await Http.GetFromJsonAsync<Cursos[]>("sample-data/cursos.json");
-    }
+        protected override async Task OnInitializedAsync()
+        {
+            cursos = await Http.GetFromJsonAsync<Cursos[]>("sample-data/cursos.json");
+        }
 
-    public class Cursos
-    {
-        public String Id { get; set; }
+        public class Cursos
+        {
+            public int Id_curso { get; set; }
 
-        public String Titulo { get; set; }
+            public String Titulo { get; set; }
 
-        public String Descripcion { get; set; }
+            public String Descripcion { get; set; }
 
-        public String Duracion { get; set; }
+            public String Duracion { get; set; }
 
-        public String Costo { get; set; }
+            public String Costo { get; set; }
 
-    }
-}
+            public String Imagen_curso { get; set; }
+
+        }
+        }
