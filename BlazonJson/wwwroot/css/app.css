@@ -250,3 +250,108 @@ tr:nth-child(even) {
     grid-row-start: 2;
     grid-row-end: 3;
 }
+.contenedor {
+    display: flex;
+    background: #ccc;
+    justify-content: center;
+    align-items: center;
+    height: 10x0%;
+}
+
+.video {
+    width: 100%;
+}
+
+.c-video:hover .controls {
+    transform: translateY(0);
+}
+
+.c-video {
+    width: 75%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.7);
+    transform: translateY(100%) translateY(-10px);
+    transition: all;
+    transition-duration: all 0.2s;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+    .buttons button {
+        background: none;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+    }
+
+        .buttons button:before {
+            content: '\f144';
+            font-family: 'Font Awesome 5 Free';
+            width: 30px;
+            height 30px;
+            display: inline-block;
+            font-size 28px;
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .buttons button.pause:before {
+            content: '\f28b';
+        }
+
+.orange-bar {
+    height: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.orange-juice {
+    height: 10px;
+    background-color: orange;
+}
+
+.volume-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .volume-controls input {
+        width: 100px;
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+
+        .volume-controls:hover input, .volume-controls input:focus {
+            width: 100px;
+            opacity: 1;
+        }
+
+input[type=range].volume::-webkit-slider-runnable-track {
+    background-color: transparent;
+}
+
+input[type=range].volume::-webkit-slider-thumb {
+    margin-left: 0;
+    height: 14px;
+    width: 14px;
+    background: #fff;
+}
+
+input[type=range].volume::-moz-range-thumb {
+    border: 1px solid #fff;
+    background: #fff;
+}
