@@ -1,0 +1,67 @@
+@page "/cursos"
+@inject HttpClient Http
+
+<h1>Cursos disponibles</h1>
+
+<p>Selecciona el curso de tu interes para poder ver los videos</p>
+
+@if (cursos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    
+<div class="grid-container" style="overflow-x:auto">
+    @foreach (var cursos in cursos)
+    {
+        <center>
+            <div class="grid-item" >
+                <div class="column">
+                    <a href="curso/detalles/@cursos.Id_curso">
+                        <div>
+
+                            <div>
+                                <img src="@cursos.Imagen_curso"  width="260" height="145" />
+                            </div>
+                            <div>
+                                <h3 class="texto">@cursos.Titulo</h3>
+                                <h3 class="texto2">@cursos.Descripcion</h3>
+                                <h3 class="texto2">@cursos.Costo</h3>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </center>
+
+
+            }
+    </div>
+    }
+
+    @code {
+private Cursos[] cursos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cursos = await Http.GetFromJsonAsync<Cursos[]>("sample-data/cursos.json");
+    }
+
+    public class Cursos
+    {
+        public int Id_curso { get; set; }
+
+        public String Titulo { get; set; }
+
+        public String Descripcion { get; set; }
+
+        public String Duracion { get; set; }
+
+        public String Costo { get; set; }
+
+        public String Imagen_curso { get; set; }
+
+    }
+    }

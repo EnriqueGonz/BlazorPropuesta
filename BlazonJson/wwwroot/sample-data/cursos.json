@@ -5,7 +5,7 @@
     "descripcion": "Curso Blazor basico",
     "duracion": "32 Horas",
     "costo": "Gratuito",
-    "imagen_curso": "/images/blazor-logo.png",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/3248678_e8ae.jpg",
     "estrellas": 4
   },
   {
@@ -14,7 +14,7 @@
     "descripcion": "Curso Java basico",
     "duracion": "48 Horas",
     "costo": "Gratuito",
-    "imagen_curso": "/images/java-logo.png",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/802946_e81d.jpg",
     "estrellas": 4
   },
   {
@@ -23,7 +23,43 @@
     "descripcion": "Curso Python basico",
     "duracion": "88.2 Horas",
     "costo": "Gratuito",
-    "imagen_curso": "/images/python-logo.png",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/882422_0549_9.jpg",
+    "estrellas": 3
+  },
+  {
+    "id_curso": 4,
+    "titulo": "Introduccion a HTML5",
+    "descripcion": "Curso HTML5 basico",
+    "duracion": "32 Horas",
+    "costo": "Gratuito",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/23757_bfb9_5.jpg",
+    "estrellas": 4
+  },
+  {
+    "id_curso": 5,
+    "titulo": "Introduccion a Node",
+    "descripcion": "Curso Nodejs basico",
+    "duracion": "48 Horas",
+    "costo": "Gratuito",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/2512098_00e5.jpg",
+    "estrellas": 4
+  },
+  {
+    "id_curso": 6,
+    "titulo": "Introduccion a Pytho3",
+    "descripcion": "Curso Python basico",
+    "duracion": "88.2 Horas",
+    "costo": "Gratuito",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/2512098_00e5.jpg",
+    "estrellas": 3
+  },
+  {
+    "id_curso": 7,
+    "titulo": "Introduccion a Pytho3",
+    "descripcion": "Curso Python basico",
+    "duracion": "88.2 Horas",
+    "costo": "Gratuito",
+    "imagen_curso": "https://img-a.udemycdn.com/course/240x135/2512098_00e5.jpg",
     "estrellas": 3
   }
 ]

@@ -1,0 +1,31 @@
+﻿@page "/curso/detalles/1"
+
+<header>
+    <h1>Conoce mas sobre el curso!</h1>
+
+    <p>Animate a aprender mas sobre este curso</p>
+</header>
+
+<div class="grid-container2">
+    <div class="item1">
+        <h6>Calificacion del curso</h6>
+        @for (int i = 0; i < 5; i++)
+        {
+            <label for="radio1" style="font-size: 24px;">★</label>
+        }
+    </div>
+    <div class="item2">
+        <center>
+            <img src="https://img-a.udemycdn.com/course/240x135/802946_e81d.jpg" width="400" />
+        </center>
+    </div>
+    <div class="item3">
+        <h2>Titulo del curso</h2>
+        <h4>Descripcion del curso</h4>
+        <h4>Duracion</h4>
+        <h4>Costo</h4>
+    </div>
+    <button type="button" class="btn btn-success" item4">Empezar ahora ►</button>
+</div>
+
+<p>You can refer to line numbers when placing grid items.</p>
