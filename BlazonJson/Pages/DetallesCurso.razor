@@ -1,4 +1,10 @@
-﻿@page "/curso/detalles/1"
+﻿@page "/curso/detalles/{id_curso}"
+@inject HttpClient Http
+
+@code {
+    [Parameter]
+    public string id_curso { get; set; }
+}
 
 <header>
     <h1>Conoce mas sobre el curso!</h1>
@@ -29,3 +35,5 @@
 </div>
 
 <p>You can refer to line numbers when placing grid items.</p>
+
+
