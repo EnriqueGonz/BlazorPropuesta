@@ -1,5 +1,21 @@
 ﻿var ready = false;
 
+function loadVideo(ListVideo) {
+    console.log(ListVideo)
+    var myvid = document.getElementById('video');
+    var myvids = ListVideo
+    var activeVideo = 0;
+
+    myvid.addEventListener('ended', function (e) {
+        // update the new active video index
+        activeVideo = (++activeVideo) % myvids.length;
+
+        // update the video source and play
+        myvid.src = myvids[activeVideo];
+        myvid.load();
+    });
+}
+
 function tooglePP() {
 
     var video = document.querySelector('.video');
@@ -57,10 +73,10 @@ function video3() {
     juice.style.width = '1px'
 }
 
-function listener() {
+function listener(ListVideo) {
+
 
     var lista = ready;
-
     if (lista) {
         alert('listo')
     }
@@ -76,6 +92,9 @@ function listener() {
 
             if (video.ended) {
                 btn.className = 'play'
+                loadVideo(ListVideo)
+                
+                
             }
         })
 
@@ -125,3 +144,23 @@ window.volumen = () => {
     }
     volume.addEventListener('input', updateVolume);
 };
+
+
+window.autoplay = () => {
+    var myvid = document.getElementById('video');
+    var myvids = [
+        "http://www.w3schools.com/html/mov_bbb.mp4",
+        "http://www.w3schools.com/html/movie.mp4"
+    ];
+    var activeVideo = 0;
+
+    myvid.addEventListener('ended', function (e) {
+        // update the new active video index
+        activeVideo = (++activeVideo) % myvids.length;
+
+        // update the video source and play
+        myvid.src = myvids[activeVideo];
+        myvid.play();
+    });
+};
+
