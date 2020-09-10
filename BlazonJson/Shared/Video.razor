@@ -1,0 +1,73 @@
+﻿
+@inject IJSRuntime JsRuntime
+@inject HttpClient Http
+
+<h3>Video</h3>
+<div class="c-video">
+    <div class="videoContainer">
+        <video class="video" src="http://www.w3schools.com/html/mov_bbb.mp4" ="video">
+            <source id="videoSourceId" type="video/mp4" />
+        </video>
+    </div>
+
+
+    <div class="controls">
+        <div class="orange-bar">
+            <div class="orange-juice">
+
+            </div>
+        </div>
+        <div class="buttons">
+            <button @onclick="playpause" id="play-pause"></button>
+        </div>
+        <div class="time">
+            <time id="time-elapsed">00:00</time>
+            <span> / </span>
+            <time id="duration">00:00</time>
+        </div>
+
+        <div class="volume-controls">
+            <input @onclick="volumen" class="volume" id="volume" value="1" type="range" max="1" min="0" step="0.01">
+        </div>
+    </div>
+</div>
+@code {
+
+    string[] m_strRenderMe = new string[] {
+        "http://www.w3schools.com/html/mov_bbb.mp4",
+        "http://www.w3schools.com/html/movie.mp4"
+    };
+
+
+
+    int currentVideo = 0;
+
+    protected void ChangeVideo()
+    {
+        currentVideo = (currentVideo + 1) % 2;
+        JsRuntime.InvokeVoidAsync("loadVideo");
+    }
+    async Task playpause()
+
+    {
+        await JsRuntime.InvokeVoidAsync("convertArray");
+        await JsRuntime.InvokeAsync<String>("listener", m_strRenderMe.ToList());
+        await JsRuntime.InvokeVoidAsync("tooglePP");
+
+
+
+    }
+    async Task volumen()
+    {
+        await JsRuntime.InvokeVoidAsync("volumen");
+    }
+
+    async Task video2()
+    {
+        await JsRuntime.InvokeVoidAsync("autoplay");
+    }
+    async Task video3()
+    {
+        await JsRuntime.InvokeVoidAsync("video3");
+    }
+}
