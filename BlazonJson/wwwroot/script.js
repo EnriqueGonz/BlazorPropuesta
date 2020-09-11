@@ -24,54 +24,16 @@ function tooglePP() {
 
     if (video.paused) {
         btn.className = 'pause';
+     
         video.play();
     }
     else {
         btn.className = 'play';
         video.pause();
+        
     }
 }
-function video0() {
 
-    var video = document.querySelector('.video');
-    var juice = document.querySelector('.orange-juice');
-    var btn = document.getElementById('play-pause');
-    var source = document.getElementsByTagName('source');
-    source[0].src = '.\video\WIN_20200816_16_54_49_Pro.mp4'
-    video.load()
-    juice.style.width = '1px'
-}
-
-function video1() {
-
-    var video = document.querySelector('.video');
-    var juice = document.querySelector('.orange-juice');
-    var btn = document.getElementById('play-pause');
-    var source = document.getElementsByTagName('source');
-    source[0].src = './video/1.mp4'
-    video.load()
-    juice.style.width = '1px'
-}
-
-function video2() {
-    var video = document.querySelector('.video');
-    var juice = document.querySelector('.orange-juice')
-    var btn = document.getElementById('play-pause');
-    var source = document.getElementsByTagName('source');
-    source[0].src = './video/2.mp4'
-    video.load()
-    juice.style.width = '1px'
-}
-
-function video3() {
-    var video = document.querySelector('.video');
-    var juice = document.querySelector('.orange-juice')
-    var btn = document.getElementById('play-pause');
-    var source = document.getElementsByTagName('source');
-    source[0].src = './video/3.mp4'
-    video.load()
-    juice.style.width = '1px'
-}
 
 function listener(ListVideo) {
 
@@ -102,6 +64,8 @@ function listener(ListVideo) {
     }
 
 }
+
+
 window.convertArray = () => {
     const video = document.getElementById('video');
     const timeElapsed = document.getElementById('time-elapsed');
@@ -144,23 +108,77 @@ window.volumen = () => {
     }
     volume.addEventListener('input', updateVolume);
 };
+window.updateProgressBar = () => {
+
+    barSize = 800;
+    myMovie = document.getElementById('video');
+    bar = document.getElementById('defaultBar');
+    progressBar = document.getElementById('progressBar');
+    bar.addEventListener('click', clickedBar, false);
 
 
-window.autoplay = () => {
-    var myvid = document.getElementById('video');
-    var myvids = [
-        "http://www.w3schools.com/html/mov_bbb.mp4",
-        "http://www.w3schools.com/html/movie.mp4"
-    ];
-    var activeVideo = 0;
+    function clickedBar(e) {
+        var mouseX =event.offsetX 
+        var newtime = mouseX * myMovie.duration / barSize;
+        myMovie.currentTime = newtime;
+        progressBar.style.width = mouseX + 'px';
+    }
 
-    myvid.addEventListener('ended', function (e) {
-        // update the new active video index
-        activeVideo = (++activeVideo) % myvids.length;
 
-        // update the video source and play
-        myvid.src = myvids[activeVideo];
-        myvid.play();
-    });
 };
 
+function animatePlayback() {
+    const playbackAnimation = document.getElementById('playback-animation');
+    var btn = document.getElementById('play');
+    if (video.paused) {
+        btn.className = 'play';
+     
+
+   
+    }
+    else {
+        btn.className = 'pause';
+
+    }
+    playbackAnimation.animate([
+        {
+            opacity: 1,
+            transform: "scale(1)",
+        },
+        {
+            opacity: 0,
+            transform: "scale(1.3)",
+        }], {
+        duration: 500,
+    });
+}
+
+
+window.menu = () => {
+    $(function () {
+        var Accordion = function (el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.link');
+            // Evento
+            links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
+        }
+
+        Accordion.prototype.dropdown = function (e) {
+            var $el = e.data.el;
+            $this = $(this),
+                $next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        var accordion = new Accordion($('#accordion'), false);
+    });
+};
