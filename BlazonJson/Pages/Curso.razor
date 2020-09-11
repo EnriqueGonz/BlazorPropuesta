@@ -1,0 +1,53 @@
+﻿@page  "/curso/play/1"
+@inject IJSRuntime JsRuntime
+@inject HttpClient Http
+
+
+
+<Video/>
+
+
+@code {
+    private Cursos[] cursos;
+    public string[] videoUrl;
+    private Videos[] videos;
+
+    protected override async Task OnInitializedAsync()
+
+    {
+        cursos = await Http.GetFromJsonAsync<Cursos[]>("sample-data/cursos.json");
+        videos = await Http.GetFromJsonAsync<Videos[]>("sample-data/videos.json");
+
+    }
+
+    public class Cursos
+    {
+        public int Id_curso { get; set; }
+
+        public String Titulo { get; set; }
+
+        public String Descripcion { get; set; }
+
+        public String Duracion { get; set; }
+
+        public String Costo { get; set; }
+
+        public String Imagen_curso { get; set; }
+
+    }
+    public class Videos
+    {
+        public int Id_curso { get; set; }
+
+        public int id_video { get; set; }
+
+        public String url { get; set; }
+
+        public int capitulo { get; set; }
+
+        public String id_seccion { get; set; }
+
+        public String descripcion { get; set; }
+
+    }
+}
