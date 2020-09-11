@@ -315,7 +315,8 @@ tr:nth-child(even) {
     height: 10px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 800px;
+    position: absolute;
 }
 
 .orange-juice {
@@ -445,3 +446,24 @@ a {
             background: #b63b4d;
             color: #FFF
         }
+
+.playback-animation {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
