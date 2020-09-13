@@ -1,0 +1,17 @@
+[
+  {
+    "id_profesor": 1,
+    "usuario": "Ali2020",
+    "password": "contraseña123456",
+    "persona_id": 4,
+    "experiencia": "Desarrollador Full Stack, concurrente"
+  },
+  {
+    "id_profesor": 2,
+    "usuario": "Robert2020",
+    "password": "contraseña123456",
+    "persona_id": 5,
+    "experiencia": "Desarrollador Móvil, raspberry PI"
+  }
+
+]

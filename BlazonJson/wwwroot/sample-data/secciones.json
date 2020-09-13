@@ -1,0 +1,23 @@
+[
+  {
+    "id_seccion": 1,
+    "nombre": "Instalación y componentes básicos",
+    "descripción": "Aprende los primeros pasos de blazor",
+    "id_curso": 1
+
+  },
+  {
+    "id_seccion": 2,
+    "nombre": "Hola Mundo en Blazor",
+    "descripción": "Aprende la estructura básica de Blazor y como ejecutarlo",
+    "id_curso": 1
+
+  },
+  {
+    "id_seccion": 3,
+    "nombre": "Pages Blazor",
+    "descripción": "Aprende la estructura básica de Blazor y como ejecutarlo",
+    "id_curso": 1
+
+  }
+]

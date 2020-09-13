@@ -1,0 +1,12 @@
+[
+  {
+    "id_requisito": 1,
+    "requisito": "Conocimientos básicos de C#",
+    "curso_id": 1
+  },
+  {
+    "id_requisito": 2,
+    "requisito": "Conocimientos básicos de JavaScript",
+    "curso_id": 1
+  }
+]

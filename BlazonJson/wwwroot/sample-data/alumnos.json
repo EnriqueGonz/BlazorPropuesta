@@ -1,0 +1,20 @@
+[
+  {
+    "id_alumno": 1,
+    "usuario": "TheMaximusFran",
+    "password": "contraseña123456",
+    "persona_id": 1
+  },
+  {
+    "id_alumno": 2,
+    "usuario": "Enrique123456",
+    "password": "contraseña123456",
+    "persona_id": 2
+  },
+  {
+    "id_alumno": 3,
+    "usuario": "Martin123456",
+    "password": "contraseña123456",
+    "persona_id": 3
+  }
+]

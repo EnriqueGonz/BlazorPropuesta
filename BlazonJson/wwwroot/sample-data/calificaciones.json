@@ -1,0 +1,20 @@
+[
+  {
+    "id_calificacion": 1,
+    "calificacion": 3.0,
+    "curso_id": 1,
+    "alumno_id": 1
+  },
+  {
+    "id_calificacion": 2,
+    "calificacion": 4.0,
+    "curso_id": 1,
+    "alumno_id": 2
+  },
+  {
+    "id_calificacion": 3,
+    "calificacion": 4.5,
+    "curso_id": 1,
+    "alumno_id": 3
+  }
+]

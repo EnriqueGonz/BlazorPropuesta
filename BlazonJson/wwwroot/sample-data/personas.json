@@ -1,0 +1,39 @@
+[
+  {
+    "id_persona": 1,
+    "nombre": "Francisco Moisés",
+    "apellido_paterno": "Orantes",
+    "apellido_materno": "Trejo",
+    "curp": "OATF990608HCSRRR04"
+  },
+  {
+    "id_persona": 2,
+    "nombre": "José Enrique",
+    "apellido_paterno": "González",
+    "apellido_materno": "Espinoza",
+    "curp": "asdfghjklljhgfds"
+  },
+  {
+    "id_persona": 3,
+    "nombre": "Martin Adonis",
+    "apellido_paterno": "López",
+    "apellido_materno": "Mendoza",
+    "curp": "asdfghjklljhgfds2345"
+  },
+  {
+    "id_persona": 4,
+    "nombre": "Alí Santiago",
+    "apellido_paterno": "López",
+    "apellido_materno": "Zunún",
+    "curp": "asdfgjhgfhfd"
+  },
+  {
+    "id_persona": 5,
+    "nombre": "Roberto Eduardo",
+    "apellido_paterno": "Gómez",
+    "apellido_materno": "Perez",
+    "curp": "asdfgjhgfhfd3456"
+  }
+
+
+]
