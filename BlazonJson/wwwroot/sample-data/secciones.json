@@ -19,5 +19,12 @@
     "descripción": "Aprende la estructura básica de Blazor y como ejecutarlo",
     "id_curso": 1
 
+  },
+  {
+    "id_seccion": 4,
+    "nombre": "Introducción a Java",
+    "descripción": "Aprende la estructura básica del lenguaje Java y como ejecutarlo",
+    "id_curso": 2
+
   }
 ]

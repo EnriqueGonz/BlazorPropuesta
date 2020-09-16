@@ -9,11 +9,10 @@
      "descripcion": "32 Horas"
    },
    {
-     "id_curso": 1,
+     "id_curso": 4,
      "id_video": 2,
      "url": "http://www.w3schools.com/html/mov_bbb.mp4",
-     "capitulo": 2,
-     "id_seccion": "Curso Blazor basico",
+     "id_seccion": 1,
      "descripcion": "32 Horas"
    },
    {
