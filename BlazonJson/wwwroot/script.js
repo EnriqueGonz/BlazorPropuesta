@@ -110,7 +110,7 @@ window.volumen = () => {
 };
 window.updateProgressBar = () => {
 
-    barSize = 800;
+    barSize = document.getElementById('defaultBar').offsetWidth;
     myMovie = document.getElementById('video');
     bar = document.getElementById('defaultBar');
     progressBar = document.getElementById('progressBar');
@@ -132,8 +132,6 @@ function animatePlayback() {
     var btn = document.getElementById('play');
     if (video.paused) {
         btn.className = 'play';
-     
-
    
     }
     else {
@@ -182,3 +180,20 @@ window.menu = () => {
         var accordion = new Accordion($('#accordion'), false);
     });
 };
+
+function toggleFullScreen() {
+    var video = document.querySelector('.video');
+    vid = document.getElementById("video");
+    fullscreenbtn = document.getElementById("fullscreenbtn");
+    videoContainer = document.getElementById('video-container')
+      var btn = document.getElementById('fullscreenbtn');
+    if (document.fullscreenElement) {
+        fullscreenbtn.className = 'play';
+            document.exitFullscreen();
+        } else {
+            videoContainer.requestFullscreen();
+
+        fullscreenbtn.className = 'pause';
+        }
+
+}
