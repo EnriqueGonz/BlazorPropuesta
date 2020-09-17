@@ -3,10 +3,42 @@
 @inject HttpClient Http
 
 
+<h1>Nombre de curso </h1>
 
-<Video/>
-
-
+<div class="container-fluid watch_video">
+    <div class="row pt-4">
+        <div class="col-md-8 video_box">
+            <Video />
+            <div class="p-1 pt-1">
+                <h4><b>Video de como crear un video en blazor</b></h4>
+                <div class="row mt-2 border-bottom">
+                    <div class="col-7">
+                        <div style="color:#606060;">Sep 26, 2019</div>
+                    </div>
+                </div>
+                <div class="row mt-4 border-bottom ">
+                    <div class="col-9 pl-0">
+                        <p style="color:#303030;">
+                            <b>Martin Adonis Lopez Mendoza</b><br>
+                        </p>
+                        <p>erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 m-4" style="color: #303030; font-weight: bold">10,699 Comments</div>
+                    <div class="col-11">
+                        <form>
+                            <input type="text" name="comment" class="input_comment" placeholder=" comment...">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <DropDownMenu/>
+        </div>
+    </div>
+</div>
 @code {
     private Cursos[] cursos;
     public string[] videoUrl;
