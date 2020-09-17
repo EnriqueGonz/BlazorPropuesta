@@ -1,4 +1,5 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,7 +26,9 @@ app {
     display: flex;
     align-items: center;
 }
-
+.title{
+	color:#030303;
+}
 .main {
     flex: 1;
 }
@@ -177,6 +180,67 @@ app {
     .main .top-row a, .main .top-row .btn-link {
         margin-left: 0;
     }
+
+    .accordion {
+        width: 100%;
+        max-width: 300%;
+        margin: 30px -6% 10px;
+        background: #FFF;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 0px
+    }
+
+        .accordion .link {
+            cursor: pointer;
+            display: block;
+            padding: 15px 15px 15px 10px;
+            color: blue;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid #CCC;
+            position: relative;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease
+        }
+
+        .accordion li:last-child .link {
+            border-bottom: 0
+        }
+
+        .accordion li i {
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            font-size: 18px;
+            color: #595959;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease
+        }
+
+            .accordion li i.fa-chevron-down {
+                right: 12px;
+                left: auto;
+                font-size: 16px
+            }
+
+        .accordion li.open .link {
+            color: #AA00FF
+        }
+
+        .accordion li.open i {
+            color: #AA00FF
+        }
+
+            .accordion li.open i.fa-chevron-down {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg)
+            }
+
 }
 
 @media (min-width: 768px) {
@@ -240,6 +304,65 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+
+    .accordion {
+        width: 110%;
+        max-width: 300%;
+        margin: -10px -30px 10px;
+        background: #FFF;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 0px
+    }
+        .accordion .link {
+            cursor: pointer;
+            display: block;
+            padding: 15px 15px 15px 10px;
+            color: blue;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid #CCC;
+            position: relative;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease
+        }
+
+        .accordion li:last-child .link {
+            border-bottom: 0
+        }
+
+        .accordion li i {
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            font-size: 18px;
+            color: #595959;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease
+        }
+
+            .accordion li i.fa-chevron-down {
+                right: 12px;
+                left: auto;
+                font-size: 16px
+            }
+
+        .accordion li.open .link {
+            color: #AA00FF
+        }
+
+        .accordion li.open i {
+            color: #AA00FF
+        }
+
+            .accordion li.open i.fa-chevron-down {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg)
+            }
 }
 th {
     background-color: #0E2262;
@@ -292,7 +415,7 @@ tr:nth-child(even) {
     
 }
 .c-video {
-    width: 75%;
+    width: 100%;
     max-width: 800px;
     position: relative;
     overflow: hidden;
@@ -322,7 +445,7 @@ tr:nth-child(even) {
     }
 
         .buttons button:before {
-            content: '\f144';
+            content: "\f144";
             font-family: 'Font Awesome 5 Free';
             width: 30px;
             height: 30px;
@@ -330,8 +453,12 @@ tr:nth-child(even) {
             font-size: 28px;
             color: #fff;
             -webkit-font-smoothing: antialiased;
+            font-weight: 600;
         }
 
+        .buttons button.play:before {
+            content: '\f144';
+        }
         .buttons button.pause:before {
             content: '\f28b';
         }
@@ -340,7 +467,7 @@ tr:nth-child(even) {
     height: 10px;
     top: 0;
     left: 0;
-    width: 800px;
+    width: 100%;
     position: absolute;
 }
 
@@ -386,65 +513,6 @@ a {
     text-decoration: none
 }
 
-.accordion {
-    width: 100%;
-    max-width: 300%;
-    margin: 30px auto 20px;
-    background: #FFF;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 0px
-}
-
-    .accordion .link {
-        cursor: pointer;
-        display: block;
-        padding: 15px 15px 15px 42px;
-        color: blue;
-        font-size: 14px;
-        font-weight: 700;
-        border-bottom: 1px solid #CCC;
-        position: relative;
-        -webkit-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        transition: all 0.4s ease
-    }
-
-    .accordion li:last-child .link {
-        border-bottom: 0
-    }
-
-    .accordion li i {
-        position: absolute;
-        top: 16px;
-        left: 12px;
-        font-size: 18px;
-        color: #595959;
-        -webkit-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        transition: all 0.4s ease
-    }
-
-        .accordion li i.fa-chevron-down {
-            right: 12px;
-            left: auto;
-            font-size: 16px
-        }
-
-    .accordion li.open .link {
-        color: #AA00FF
-    }
-
-    .accordion li.open i {
-        color: #AA00FF
-    }
-
-        .accordion li.open i.fa-chevron-down {
-            -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            transform: rotate(180deg)
-        }
 
 .submenu {
     display: none;
@@ -492,3 +560,44 @@ a {
 .hidden {
     display: none;
 }
+.fullscreen {
+    padding: 10px;
+}
+
+.fullscreen button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+    .fullscreen button:before {
+        content: '\f065';
+        font-family: 'Font Awesome 5 Free';
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        font-size: 28px;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 600;
+    }
+
+    .fullscreen button.pause:before {
+        content: '\f78c';
+    }
+    .time{
+        color:#fff;
+        padding:10px;
+        margin-top: 11px;
+    }
+.input_comment {
+    width: 100%;
+    border: 0px;
+    border-bottom: solid 1px #dee2e6;
+    background: transparent;
+}
+
+    .input_comment:focus {
+        outline: none;
+    }
