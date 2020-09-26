@@ -1,0 +1,37 @@
+﻿@layout Login;
+@page "/";
+@inject NavigationManager NavigationManager
+<center>
+    <div id="form_wrapper">
+        <div id="form_left">
+            <img src="http://clustertichiapas.com.mx/images/logo/logohighbits.png" alt="computer icon">
+        </div>
+        <div id="form_right">
+            <h1>Login</h1>
+            <div class="input_container">
+                <span class="oi oi-envelope-closed" ></span>
+                <input placeholder="Email" type="email" name="Email" id="field_email" class='input_field'>
+            </div>
+            <div class="input_container">
+                <i class="fas fa-lock"></i>
+                <input placeholder="Password" type="password" name="Password" id="field_password" class='input_field'>
+            </div>
+            <input type="submit" value="Login" id='input_submit' class='input_field' @onclick="navegar">
+            <span> <a href="#"> Forgot your password?</a></span>
+            <span id='create_account'>
+                <a href="#">Create  account </a>
+            </span>
+        </div>
+    </div>
+
+</center>
+
+
+
+
+@code {
+    public void navegar()
+    {
+        NavigationManager.NavigateTo("/index");
+    }
+}

@@ -4,9 +4,8 @@
      "id_curso": 1,
      "id_video": 1,
      "url": "https://www.youtube.com/watch?v=U2lg5VL7cJI",
-     "capitulo": 1,
-     "id_seccion": "Curso Blazor basico",
-     "descripcion": "32 Horas"
+     "id_seccion": 1,
+     "descripcion": "32 Hora"
    },
    {
      "id_curso": 4,
@@ -15,21 +14,19 @@
      "id_seccion": 1,
      "descripcion": "32 Horas"
    },
-   {
-     "id_curso": 1,
-     "id_video": 3,
-     "url": "https://www.youtube.com/watch?v=U2lg5VL7cJI",
-     "capitulo": 3,
-     "id_seccion": "Curso Blazor basico",
-     "descripcion": "32 Horas"
-   },
-   {
-     "id_curso": 2,
-     "id_video": 4,
-     "url": "https://www.youtube.com/watch?v=U2lg5VL7cJI",
-     "capitulo": 1,
-     "id_seccion": "Curso Blazor basico",
-     "descripcion": "32 Horas"
-   }
+  {
+    "id_curso": 1,
+    "id_video": 3,
+    "url": "https://www.youtube.com/watch?v=U2lg5VL7cJI",
+    "id_seccion": 1,
+    "descripcion": "32 Horas"
+  },
+  {
+    "id_curso": 2,
+    "id_video": 4,
+    "url": "https://www.youtube.com/watch?v=U2lg5VL7cJI",
+    "id_seccion": 1,
+    "descripcion": "32 Horas"
+  }
 
  ]

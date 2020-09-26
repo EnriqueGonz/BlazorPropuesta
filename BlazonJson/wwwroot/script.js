@@ -18,7 +18,7 @@ function loadVideo(ListVideo) {
 
 function tooglePP() {
 
-    var video = document.querySelector('.video');
+    var video = document.getElementById('video');
     var juice = document.querySelector('.orange-juice')
     var btn = document.getElementById('play-pause');
 
@@ -43,7 +43,7 @@ function listener(ListVideo) {
         alert('listo')
     }
     else {
-        var video = document.querySelector('.video');
+        var video = document.getElementById('video');
         var juice = document.querySelector('.orange-juice')
         var btn = document.getElementById('play-pause');
 
@@ -56,7 +56,7 @@ function listener(ListVideo) {
                 btn.className = 'play'
                 loadVideo(ListVideo)
                 
-                
+
             }
         })
 
