@@ -1,5 +1,8 @@
 ﻿var ready = false;
 
+
+
+
 function loadVideo(ListVideo) {
     console.log(ListVideo)
     var myvid = document.getElementById('video');
@@ -181,6 +184,7 @@ window.menu = () => {
     });
 };
 
+<<<<<<< Updated upstream
 function toggleFullScreen() {
     var video = document.querySelector('.video');
     vid = document.getElementById("video");
@@ -197,3 +201,8 @@ function toggleFullScreen() {
         }
 
 }
+=======
+
+
+
+>>>>>>> Stashed changes

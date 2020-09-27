@@ -1,0 +1,26 @@
+﻿<center>
+    <div class="grid-item">
+        <div class="column">
+            <a href="curso/detalles/">
+                <div>
+
+                    <div>
+                        <img src="@miCurso.Imagen_curso" width="260" height="145" />
+                    </div>
+                    <div>
+                        <h3 class="texto">@miCurso.Titulo</h3>
+                        <h3 class="texto2">@miCurso.Descripcion</h3>
+                        <h3 class="texto2">@miCurso.Costo</h3>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+    </div>
+</center>
+
+@code {
+    [Parameter]
+    public Cursos miCurso { get; set; }
+
+}
